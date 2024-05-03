@@ -28,5 +28,14 @@ view: sales {
   measure: count {
     type: count
     drill_fields: [prod_name]
-  }
+    }
+
+    measure: Sales {
+      group_label: "Count"
+      type: number
+      sql: sum(${units} * ${_unit_price_}) ;;
+     # drill_fields: [detail*]
+    }
+
+
 }
