@@ -10,7 +10,14 @@ datagroup: tab_looker_proj_default_datagroup {
 
 persist_with: tab_looker_proj_default_datagroup
 
-explore: region {}
+explore: region {
+  #required_access_grants: [fsp]
+  label: "Region"
+  #view_label: "WS2 Group Users G1 Latest Metadata"
 
-explore: sales {}
-
+  join: sales {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${region.region_id}=${sales.reg_id} ;;
+  }
+}
