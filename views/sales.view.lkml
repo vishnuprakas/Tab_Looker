@@ -30,6 +30,11 @@ view: sales {
     drill_fields: [prod_name]
     }
 
+  dimension: date {
+    type: date
+    sql: cast(${ord_dt}) ;;
+  }
+
     measure: Sales {
       group_label: "Count"
       type: number
