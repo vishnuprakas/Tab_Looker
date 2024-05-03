@@ -31,8 +31,9 @@ view: sales {
     }
 
   dimension: date {
+    type:  date
     datatype: date
-    sql: cast(${ord_dt}, date) ;;
+    sql: cast(${ord_dt} as date) ;;
   }
 
     measure: Sales {
