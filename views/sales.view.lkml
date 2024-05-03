@@ -32,7 +32,7 @@ view: sales {
 
   dimension: date {
     type:  date
-    datatype: date
+   # datatype: date
     sql: cast(${ord_dt} as date) ;;
   }
 
