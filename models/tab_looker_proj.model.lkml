@@ -15,6 +15,11 @@ explore: region {
   label: "Region"
   #view_label: "WS2 Group Users G1 Latest Metadata"
 
+  access_filter: {
+    field: region.region_name
+    user_attribute: region_pdp_test
+  }
+
   join: sales {
     type: left_outer
     relationship: many_to_one
