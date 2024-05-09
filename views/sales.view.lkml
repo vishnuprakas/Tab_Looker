@@ -43,5 +43,12 @@ view: sales {
      # drill_fields: [detail*]
     }
 
-
+  set: detail {
+    fields: [
+      region.region_name,
+      prod_id,
+      prod_name,
+      Sales
+    ]
+  }
 }
