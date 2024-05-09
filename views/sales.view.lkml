@@ -40,7 +40,7 @@ view: sales {
       group_label: "Count"
       type: number
       sql: sum(${units} * ${_unit_price_}) ;;
-     # drill_fields: [detail*]
+      drill_fields: [detail*]
     }
 
   set: detail {
