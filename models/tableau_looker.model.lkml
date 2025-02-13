@@ -18,4 +18,9 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 #     sql_on: ${users.id} = ${orders.user_id} ;;
 #   }
 # }
-explore: students {}
+explore: students {
+  join:  college_data1{
+    sql_on: ${students.name}=${college_data1.name} ;;
+    relationship: one_to_one
+  }
+}
