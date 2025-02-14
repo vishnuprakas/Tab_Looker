@@ -9,6 +9,9 @@ view: sales {
     type: string
     sql: ${TABLE}.Ord_Dt ;;
   }
+
+
+  
   dimension: prod_id {
     type: number
     sql: ${TABLE}.Prod_Id ;;
